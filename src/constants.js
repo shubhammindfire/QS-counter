@@ -1,0 +1,6 @@
+export const INITIAL_VALUE = 10;
+export const MAX_VALUE = 25;
+
+export const COUNTER_INCREASE = "COUNTER_INCREASE";
+export const COUNTER_DECREASE = "COUNTER_DECREASE";
+export const COUNTER_CUSTOM = "COUNTER_CUSTOM";
