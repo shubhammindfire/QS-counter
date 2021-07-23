@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext");
+
+.component-wrapper {
+    padding-top: 150px;
+    text-align: center;
+}
+
+.button-wrapper {
+    padding-top: 10px;
+}
+
+.counter-button {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #b24242;
+    font-size: 21px;
+    background-color: white;
+    color: #b24242;
+    font-weight: bold;
+    height: 56px;
+    width: 60px;
+}
+
+.counter-button:hover {
+    background-color: #b24242;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.counter-increase {
+    border-radius: 0px 8px 8px 0px;
+}
+
+.counter-decrease {
+    border-radius: 8px 0px 0px 8px;
+}
+
+.counter-text {
+    font-size: 21px;
+    font-weight: bold;
+    height: 52px;
+    width: 50px;
+    text-align: center;
+    border-top: 1px solid #b24242;
+    border-bottom: 1px solid #b24242;
+    border-left: none;
+    border-right: none;
+    background-color: #fbe8e8;
+    color: #b24242;
+    font-family: "Roboto";
+}
+
+.counter-text:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
