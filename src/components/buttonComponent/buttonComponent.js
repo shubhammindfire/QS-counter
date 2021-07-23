@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "./buttonComponent.css";
+import "./../../css/buttonComponent.css";
 import {
     INITIAL_VALUE,
     MAX_VALUE_CONSTANT,
     COUNTER_INCREASE,
     COUNTER_DECREASE,
     COUNTER_CUSTOM,
-} from "./../../constants.js";
+} from "../../constants.js";
 
 function ButtonComponent() {
     const [counter, setCounter] = useState(INITIAL_VALUE ?? 1);
