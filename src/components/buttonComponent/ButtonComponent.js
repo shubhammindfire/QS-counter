@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import "./buttonComponent.css";
 import {
     INITIAL_VALUE,
-    MAX_VALUE,
+    MAX_VALUE_CONSTANT,
     COUNTER_INCREASE,
     COUNTER_DECREASE,
     COUNTER_CUSTOM,
 } from "./../../constants.js";
 
 function ButtonComponent() {
-    const [counter, setCounter] = useState(INITIAL_VALUE);
+    const [counter, setCounter] = useState(INITIAL_VALUE ?? 1);
+    const MAX_VALUE = MAX_VALUE_CONSTANT ?? 1000;
 
     // this handles the changes to the counter
     function handleCounter(e, type) {
@@ -21,10 +22,14 @@ function ButtonComponent() {
             setCounter(counter - 1);
         } else if (type === COUNTER_CUSTOM) {
             // checks that the value entered by user is not more than max value
-            if (e.target.valueAsNumber <= MAX_VALUE)
+            if (isNaN(e.target.valueAsNumber)) {
+                setCounter(0);
+            } else if (e.target.valueAsNumber <= MAX_VALUE)
                 setCounter(e.target.valueAsNumber);
         }
     }
+
+    const handleFocus = (event) => event.target.select();
 
     return (
         <div className="component-wrapper">
@@ -42,6 +47,7 @@ function ButtonComponent() {
                     value={counter}
                     max={MAX_VALUE}
                     onChange={(e) => handleCounter(e, COUNTER_CUSTOM)}
+                    onFocus={handleFocus}
                 />
                 <button
                     className="counter-button counter-increase"

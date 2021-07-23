@@ -14,3 +14,4 @@ To develop or test this app please follow the below steps:
 ## Defaults
 
 -   You can change the default `initialValue` and `maxValue` of the counter in the `src/constants.js` file
+-   By default the `initialValue` used is 1 and `maxValue` used is 1000, but if you add a value for these in `src/constants.js` file and these new values will be used.
